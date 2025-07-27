@@ -10,32 +10,32 @@ const Navbar = () => {
       {/* LEFT  */}
       <div className="md:hidden lg:block w-[20%]">
         <Link href="/" className="font-bold text-blue-700 text-2xl">
-          DiMEJiSOCiAL
+          LINKUP
         </Link>
       </div>
 
       {/* CENTER  */}
-      <div className="hidden md:flex w-[50%]">
+      <div className="hidden md:flex w-[50%] text-sm">
         {/* LINKS  */}
         <div className="flex gap-6 text-gray-600">
-          <Link href="/" className="flex gap-1">
+          <Link href="/" className="flex gap-1 items-center">
             <House color="blue" />
             <p className="text-lg">Homepage</p>
           </Link>
 
-          <Link href="/" className="flex gap-1">
+          <Link href="/" className="flex gap-1 items-center">
             <Contact color="blue" />
             <p className="text-lg">Friends</p>
           </Link>
 
-          <Link href="/" className="flex gap-1">
+          <Link href="/" className="flex gap-1 items-center">
             <CircleFadingPlus color="blue" />
             <p className="text-lg">Stories</p>
           </Link>
         </div>
       </div>
       {/* RIGHT  */}
-      <div className="">
+      <div className="w-[30%] flex items-center gap-4 xl:gap-8 justify-end">
         <MobileMenu />
       </div>
     </div>
