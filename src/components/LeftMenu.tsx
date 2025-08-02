@@ -1,7 +1,7 @@
 import React from "react";
 
 const LeftMenu = () => {
-  return <div>Left Menuu</div>;
+  return <div>Left Menu</div>;
 };
 
 export default LeftMenu;
