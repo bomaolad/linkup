@@ -7,7 +7,6 @@ import Stories from "@/components/Stories";
 const Homepage = () => {
   return (
     <div className="flex gap-6 pt-6">
-
       {/* LEFT  */}
       <div className="hidden xl:block w-[20%]">
         <LeftMenu />
@@ -26,7 +25,6 @@ const Homepage = () => {
       <div className="hidden lg:block w-[30%]">
         <RightMenu />
       </div>
-
     </div>
   );
 };

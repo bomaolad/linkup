@@ -2,53 +2,57 @@ import Link from "next/link";
 import React from "react";
 import { MapPin, GraduationCap, Briefcase } from "lucide-react";
 
-export const UserInfoCard = () => {
+const UserInfoCard = ({ userId }: { userId: string }) => {
   return (
-    <div className="p-4 bg-white rounded-lg shadow-sm text-sm space-y-4">
+    <div className="p-4 bg-white rounded-lg shadow-sm text-sm">
       {/* Header */}
-      <div className="flex items-center justify-between">
-        <h3 className="font-semibold text-gray-700">User Information</h3>
+      <div className="flex items-center justify-between mb-4">
+        <span className="font-semibold text-gray-700">User Information</span>
         <Link href="/" className="text-blue-500 text-xs hover:underline">
           See all
         </Link>
       </div>
 
       {/* User Info */}
-      <div className="space-y-2">
-        <h4 className="font-medium text-gray-800">Elva Weaver</h4>
-        <p className="text-gray-500 text-xs">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
+      <div className="flex flex-col gap-3">
+        <div>
+          <span className="block font-medium text-gray-800">Elva Weaver</span>
+          <span className="block text-gray-500 text-xs">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </span>
+        </div>
 
-        {/* Info items */}
         <div className="flex items-center gap-2 text-gray-600">
           <MapPin className="w-4 h-4 text-green-500" />
           <span>Living in Denver</span>
         </div>
+
         <div className="flex items-center gap-2 text-gray-600">
           <GraduationCap className="w-4 h-4 text-gray-500" />
           <span>Went to Edgar High School</span>
         </div>
+
         <div className="flex items-center gap-2 text-gray-600">
           <Briefcase className="w-4 h-4 text-gray-500" />
           <span>Works at Apple Inc.</span>
         </div>
 
-        {/* Website */}
-        <a
-          href="https://lama.dev"
-          target="_blank"
-          className="block text-blue-500 hover:underline text-xs"
-        >
-          lama.dev
-        </a>
+        <div>
+          <a
+            href="https://linkup.dev"
+            target="_blank"
+            rel="noreferrer"
+            className="text-blue-500 hover:underline text-xs"
+          >
+            linkup.dev
+          </a>
+        </div>
 
-        {/* Join date */}
-        <p className="text-gray-400 text-xs">Joined November 2024</p>
+        <span className="text-gray-400 text-xs">Joined November 2024</span>
       </div>
 
       {/* Actions */}
-      <div className="flex gap-2">
+      <div className="flex gap-2 mt-4">
         <button className="flex-1 bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md text-xs font-medium">
           Following
         </button>
@@ -59,3 +63,5 @@ export const UserInfoCard = () => {
     </div>
   );
 };
+
+export default UserInfoCard;

@@ -16,7 +16,7 @@ const Advert = ({ size }: { size?: "sm" | "md" | "lg" }) => {
         {/* Placeholder image */}
         <div className="w-full h-full bg-gray-300" />
         <Image
-          src="https://images.pexels.com/photos/33271416/pexels-photo-33271416.jpeg"
+          src=""
           alt=""
           height={20}
           width={30}

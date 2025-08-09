@@ -25,7 +25,6 @@ import SearchInput from "./SearchInput";
 const Navbar = () => {
   return (
     <nav className="flex items-center justify-between px-4 lg:px-8 h-20 bg-slate-100 shadow-sm border-b">
-
       {/* LEFT: Logo */}
       <div className="md:hidden lg:block w-[20%]">
         <Link href="/" className="font-bold text-blue-700 text-2xl">
@@ -35,12 +34,11 @@ const Navbar = () => {
 
       {/* CENTER: Navigation + Search */}
       <div className="hidden md:flex w-full lg:w-[55%] text-sm items-center justify-between px-2 gap-4">
-
         {/* Nav Links */}
         <div className="flex gap-x-4 text-gray-600 items-center">
           {[
             { href: "/", icon: House, label: "Homepage" },
-            { href: "/", icon: Contact, label: "Friends" },
+            { href: "/profile/test", icon: Contact, label: "Profile" },
             { href: "/", icon: CircleFadingPlus, label: "Stories" },
           ].map(({ href, icon: Icon, label }) => (
             <Link
@@ -60,7 +58,6 @@ const Navbar = () => {
 
       {/* RIGHT: Icons & Auth */}
       <div className="w-[30%] flex items-center gap-4 xl:gap-6 justify-end">
-
         <ClerkLoading>
           <Loading />
         </ClerkLoading>
