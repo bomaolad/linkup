@@ -12,7 +12,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "www.pexels.com"
+        hostname: "www.freepik.com"
       }
     ]
   }

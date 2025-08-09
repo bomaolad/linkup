@@ -34,10 +34,10 @@ const MobileMenu = () => {
           onClick={() => setIsOpen((prev) => !prev)}
         >
           <Link href="/">Home</Link>
-          <Link href="/settings">Friends</Link>
-          <Link href="/">Groups</Link>
+          <Link href="/profile/test">Profile</Link>
+          <Link href="/settings">Settings</Link>
           <Link href="/">Stories</Link>
-          <Link href="/">Login</Link>
+          <Link href="/">Logout</Link>
         </div>
       )}
     </div>
