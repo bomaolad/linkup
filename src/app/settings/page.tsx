@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 
 const SettingsPage = () => {
@@ -11,12 +10,120 @@ const SettingsPage = () => {
   const [allowMessagesFromAll, setAllowMessagesFromAll] = useState(false);
 
   const tabs = [
-    { id: "account", label: "Account", icon: "👤" },
-    { id: "privacy", label: "Privacy", icon: "🔒" },
-    { id: "notifications", label: "Notifications", icon: "🔔" },
-    { id: "security", label: "Security", icon: "🛡️" },
-    { id: "appearance", label: "Appearance", icon: "🎨" },
-    { id: "data", label: "Data & Storage", icon: "💾" },
+    {
+      id: "account",
+      label: "Account",
+      icon: (
+        <svg
+          className="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+          />
+        </svg>
+      ),
+    },
+    {
+      id: "privacy",
+      label: "Privacy",
+      icon: (
+        <svg
+          className="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+          />
+        </svg>
+      ),
+    },
+    {
+      id: "notifications",
+      label: "Notifications",
+      icon: (
+        <svg
+          className="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 17h5l-5 5-5-5h5zm-8.016-6.014a7 7 0 1113.979.025l-6.979 6.975-7.014-6.975z"
+          />
+        </svg>
+      ),
+    },
+    {
+      id: "security",
+      label: "Security",
+      icon: (
+        <svg
+          className="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+          />
+        </svg>
+      ),
+    },
+    {
+      id: "appearance",
+      label: "Appearance",
+      icon: (
+        <svg
+          className="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4 4 4 0 004-4V5z"
+          />
+        </svg>
+      ),
+    },
+    {
+      id: "data",
+      label: "Data & Storage",
+      icon: (
+        <svg
+          className="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
+          />
+        </svg>
+      ),
+    },
   ];
 
   const renderTabContent = () => {
@@ -29,7 +136,7 @@ const SettingsPage = () => {
                 Basic Information
               </h3>
               <div className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       First Name
@@ -105,14 +212,14 @@ const SettingsPage = () => {
                   </label>
                   <input
                     type="url"
-                    defaultValue="lama.dev"
+                    defaultValue="linkup.dev"
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
               </div>
             </div>
 
-            <div className="flex justify-end space-x-3">
+            <div className="flex flex-col sm:flex-row justify-end space-y-2 sm:space-y-0 sm:space-x-3">
               <button className="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 transition-colors">
                 Cancel
               </button>
@@ -131,8 +238,8 @@ const SettingsPage = () => {
                 Profile Privacy
               </h3>
               <div className="space-y-4">
-                <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                  <div>
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 bg-gray-50 rounded-lg">
+                  <div className="mb-2 sm:mb-0">
                     <h4 className="font-medium text-gray-900">
                       Private Profile
                     </h4>
@@ -151,8 +258,8 @@ const SettingsPage = () => {
                   </label>
                 </div>
 
-                <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                  <div>
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 bg-gray-50 rounded-lg">
+                  <div className="mb-2 sm:mb-0">
                     <h4 className="font-medium text-gray-900">
                       Show Online Status
                     </h4>
@@ -171,8 +278,8 @@ const SettingsPage = () => {
                   </label>
                 </div>
 
-                <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                  <div>
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 bg-gray-50 rounded-lg">
+                  <div className="mb-2 sm:mb-0">
                     <h4 className="font-medium text-gray-900">
                       Allow Messages from Anyone
                     </h4>
@@ -394,10 +501,10 @@ const SettingsPage = () => {
                   <div className="w-full h-20 bg-gray-800 rounded mb-2"></div>
                   <p className="text-sm font-medium text-center">Dark</p>
                 </div>
-                <div className="p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-gray-300">
+                {/*<div className="p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-gray-300">
                   <div className="w-full h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded mb-2"></div>
                   <p className="text-sm font-medium text-center">Auto</p>
-                </div>
+                </div>*/}
               </div>
             </div>
 
@@ -502,39 +609,70 @@ const SettingsPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 py-8">
-      <div className="max-w-4xl mx-auto px-4">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Settings</h1>
-          <p className="text-gray-600 mt-2">
+    <div className="min-h-screen bg-gray-50 py-4 md:py-8">
+      <div className="max-w-4xl mx-auto px-2 md:px-4">
+        <div className="mb-4 md:mb-8">
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900">
+            Settings
+          </h1>
+          <p className="text-gray-600 mt-2 hidden sm:block">
             Manage your account settings and preferences
           </p>
         </div>
 
         <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-          <div className="flex">
+          <div className="flex flex-col md:flex-row">
+            {/* Mobile Header - Only visible on small screens */}
+            <div className="md:hidden bg-gray-50 border-b border-gray-200 p-4">
+              <h2 className="text-lg font-semibold text-gray-900 capitalize">
+                {tabs.find((tab) => tab.id === activeTab)?.label}
+              </h2>
+            </div>
+
             {/* Sidebar */}
-            <div className="w-64 bg-gray-50 border-r border-gray-200">
-              <nav className="p-4 space-y-1">
-                {tabs.map((tab) => (
-                  <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
-                    className={`w-full flex items-center px-3 py-2 text-left rounded-md transition-colors ${
-                      activeTab === tab.id
-                        ? "bg-blue-50 text-blue-700 border-r-2 border-blue-500"
-                        : "text-gray-700 hover:bg-gray-100"
-                    }`}
-                  >
-                    <span className="mr-3 text-lg">{tab.icon}</span>
-                    <span className="font-medium">{tab.label}</span>
-                  </button>
-                ))}
+            <div className="w-full md:w-16 lg:w-64 bg-gray-50 border-r border-gray-200 md:border-b-0 border-b">
+              <nav className="p-2 md:p-4">
+                {/* Mobile - Horizontal scroll */}
+                <div className="flex md:hidden overflow-x-auto space-x-2 pb-2">
+                  {tabs.map((tab) => (
+                    <button
+                      key={tab.id}
+                      onClick={() => setActiveTab(tab.id)}
+                      className={`flex-shrink-0 flex items-center justify-center p-3 rounded-md transition-colors min-w-[48px] ${
+                        activeTab === tab.id
+                          ? "bg-blue-50 text-blue-700"
+                          : "text-gray-700 hover:bg-gray-100"
+                      }`}
+                    >
+                      {tab.icon}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Desktop - Vertical layout */}
+                <div className="hidden md:flex md:flex-col space-y-1">
+                  {tabs.map((tab) => (
+                    <button
+                      key={tab.id}
+                      onClick={() => setActiveTab(tab.id)}
+                      className={`w-full flex items-center px-3 py-2 text-left rounded-md transition-colors ${
+                        activeTab === tab.id
+                          ? "bg-blue-50 text-blue-700 border-r-2 border-blue-500"
+                          : "text-gray-700 hover:bg-gray-100"
+                      }`}
+                    >
+                      <span className="flex-shrink-0">{tab.icon}</span>
+                      <span className="ml-3 font-medium hidden lg:block">
+                        {tab.label}
+                      </span>
+                    </button>
+                  ))}
+                </div>
               </nav>
             </div>
 
             {/* Content */}
-            <div className="flex-1 p-8 bg-slate-50">{renderTabContent()}</div>
+            <div className="flex-1 p-4 md:p-8">{renderTabContent()}</div>
           </div>
         </div>
       </div>
